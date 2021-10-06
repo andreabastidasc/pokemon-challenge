@@ -1,0 +1,140 @@
+.pokemon-card {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    height: 27rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin-top: 2rem;
+    padding: 1rem;
+    &-img {
+        max-width: 200px;
+        max-height: 170px;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    &-title {
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+    &-text {
+        font-size: 1.3rem;
+        span {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    }   
+    &-abilities-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin: 0 auto;
+        padding-left: 6rem;
+        margin-top: .5rem;
+        li {
+            font-size: 16px;
+        }
+        li:before {
+            content: url(../public/assets/img/estrella.svg); margin-left: -20px; margin-right: 10px;
+        }
+    }
+}
+
+//TITLT CARD EFFECT
+.tilt-box-wrap {
+    width: 20rem;
+    height: 25rem;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.6s ease-out;
+    perspective: 1000px;
+    background: rgba(255, 255, 255, 0);
+    &:hover {
+        transition: all 0.3s linear;
+        transform: scale(1.1);
+    }
+    .t-over { 
+        width: 33.333%;
+        height: 33.333%;
+        position: absolute;
+        z-index: 1;
+        &:nth-child(1) {
+            left: 0;
+            top: 0;
+        }
+        &:nth-child(2) {
+            left: 33.333%;
+            top: 0;
+        }
+        &:nth-child(3) {
+            left: 66.666%;
+            top: 0;
+        }
+        &:nth-child(4) {
+            left: 0;
+            top: 33.333%;
+        }
+        &:nth-child(5) {
+            left: 33.333%;
+            top: 33.333%;
+        }
+        &:nth-child(6) {
+            left: 66.666%;
+            top: 33.333%;
+        }
+        &:nth-child(7) {
+            left: 0;
+            top: 66.666%;
+        }
+        &:nth-child(8) {
+            left: 0;
+            top: 66.666%;
+        }
+        &:nth-child(9) {
+            left: 66.666%;
+            top: 66.666%;
+        }
+    }
+    .t-over:nth-child(1):hover ~ .tilt-box {
+        transform: rotateX(-20deg) rotateY(20deg);
+    }
+    .t-over:nth-child(2):hover ~ .tilt-box {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+    .t-over:nth-child(3):hover ~ .tilt-box {
+        transform: rotateX(-20deg) rotateY(-20deg);
+    }
+    .t-over:nth-child(4):hover ~ .tilt-box {
+        transform: rotateX(0deg) rotateY(20deg);
+    }
+    .t-over:nth-child(5):hover ~ .tilt-box {
+        transform: rotateX(0deg) rotateY(20deg);
+    }
+    .t-over:nth-child(6):hover ~ .tilt-box {
+        transform: rotateX(0deg) rotateY(-20deg);
+    }
+    .t-over:nth-child(7):hover ~ .tilt-box {
+        transform: rotateX(20deg) rotateY(20deg);
+    }
+    .t-over:nth-child(8):hover ~ .tilt-box {
+        transform: rotateX(20deg) rotateY(20deg);
+    }
+    .t-over:nth-child(9):hover ~ .tilt-box {
+        transform: rotateX(20deg) rotateY(-20deg);
+    }
+    .tilt-box {
+        position: relative;
+        transition: all 0.6s ease-out;
+        transform: rotateX(0deg) rotateY(0deg);
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+}

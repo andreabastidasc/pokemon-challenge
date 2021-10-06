@@ -4,4 +4,9 @@ const axiosApi = axios.create({
     baseURL: 'https://pokeapi.co/api/v2',
 })
 
-export {axiosApi}
+const axiosLogin = axios.create({
+    baseURL: 'https://reqres.in/api',
+})
+
+
+export {axiosApi, axiosLogin}

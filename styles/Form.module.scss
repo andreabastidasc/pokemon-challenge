@@ -1,0 +1,78 @@
+.login-container {
+    background-image: url(../public/assets/img/pokemonBG.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.login-form-container {
+    .login-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(255,255,255,0.2);
+        border-left: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+        border-radius: 3px;
+        padding: 2rem;
+        width: 450px;
+
+        &-title {
+            margin: 10px auto;
+            text-align: center;
+            img {
+                width: 20px;
+              
+            }
+        }
+        &-submit {
+            text-align: center;
+            
+
+            button {
+                margin-top: 1rem;
+                max-width: 100px;
+                width: 100%;
+                text-align: center;
+                font-weight: bold;
+                border-radius: 2rem;
+                padding: .8rem 1.5rem;
+                &:hover {
+                    background: rgba(255, 255, 255, 0.733);
+                    color: white;
+                }
+            }
+        }
+
+        input[type='email'], input[type='password'], input[type='checkbox'], button[type='submit'] { 
+            border: 1px solid white;
+            background: rgba(255, 255, 255, 0);
+              backdrop-filter: blur(10px);
+              box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+            color: rgb(255, 255, 255);
+            transition: color 0.3s ease-out;
+            color: white;
+        }
+
+        button[type='submit']:hover {
+            background: rgba(255, 255, 255, 0.979);
+            color: crimson;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #ffffff;
+        }
+
+        small {
+            color: rgb(226, 226, 226);
+        }
+    }
+}
+
