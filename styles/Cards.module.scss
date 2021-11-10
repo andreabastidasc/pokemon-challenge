@@ -7,8 +7,7 @@
     text-align: center;
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
     border-radius: 10px;
     margin-top: 2rem;
@@ -55,11 +54,11 @@
     margin: 0 auto;
     position: relative;
     transition: all 0.6s ease-out;
-    perspective: 1000px;
+    perspective: 700px;
     background: rgba(255, 255, 255, 0);
     &:hover {
         transition: all 0.3s linear;
-        transform: scale(1.1);
+        transform: scale(1);
     }
     .t-over { 
         width: 33.333%;
@@ -134,7 +133,11 @@
         position: relative;
         transition: all 0.6s ease-out;
         transform: rotateX(0deg) rotateY(0deg);
-        perspective: 1000px;
+        perspective: 600px;
         transform-style: preserve-3d;
+        
+    }
+    .tilt-box p {
+        transform: translateZ(40px);
     }
 }

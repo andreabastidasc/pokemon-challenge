@@ -17,6 +17,7 @@ export const CardCustom = ({ pokemon }) => {
     }
     getPokemonOnly()
   }, [pokemon])
+
   return pokemonOnly
     ? (
           <Col className='mt-4' xs={12} sm={12} md={6} lg={6} xl={4}>
@@ -33,7 +34,7 @@ export const CardCustom = ({ pokemon }) => {
               <Card className={`${styles['pokemon-card']} ${styles['tilt-box']}`} >
                <Card.Img className={styles['pokemon-card-img']} variant="top" src={pokemonOnly.sprites.front_default} alt={pokemon.name} />
                <Card.Body className="pt-0">
-                 <Card.Title className={styles['pokemon-card-title']}>{pokemonOnly.name}</Card.Title>
+                 <Card.Title className={styles['pokemon-card-title']}><p>{pokemonOnly.name}</p></Card.Title>
                  <Card.Text className={styles['pokemon-card-text']}>
                    <span>Weight:</span>{pokemonOnly.weight}
                  </Card.Text>
